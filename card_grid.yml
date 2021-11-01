@@ -1,0 +1,67 @@
+openapi: 3.0.1
+info:
+  title: defaultTitle
+  description: defaultDescription
+  version: '0.1'
+servers:
+  - url: http://localhost
+paths:
+  /drupal9/api/card-grid:
+    get:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: columns
+          in: query
+          schema:
+            type: string
+          example: '3'
+        - name: rows
+          in: query
+          schema:
+            type: string
+          example: 3columns
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: string
+                  meta:
+                    type: object
+                    properties:
+                      success:
+                        type: boolean
+                      message:
+                        type: string
+              examples:
+                '0':
+                  value: >-
+                    {"meta":{"success":false,"message":"Only two parameters are
+                    allowed and they should be \u0027rows\u0027 and
+                    \u0027columns\u0027. Both the parameters are
+                    required."},"data":[]}
+                '1':
+                  value: >-
+                    {"meta":{"success":true,"cardCount":6,"uniqueCardCount":3,"uniqueCards":["W","D","C"]},"data":{"cards":[["W","W","D"],["D","C","C"]]}}
+                '2':
+                  value: >-
+                    {"meta":{"success":false,"message":"Only two parameters are
+                    allowed and they should be \u0027rows\u0027 and
+                    \u0027columns\u0027. Both the parameters are
+                    required."},"data":[]}
+                '3':
+                  value: >-
+                    {"meta":{"success":false,"message":"Only two parameters are
+                    allowed and they should be \u0027rows\u0027 and
+                    \u0027columns\u0027. Both the parameters are
+                    required."},"data":[]}
+      servers:
+        - url: http://localhost
+    servers:
+      - url: http://localhost

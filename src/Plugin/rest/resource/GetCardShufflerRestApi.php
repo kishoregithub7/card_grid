@@ -36,7 +36,7 @@ class GetCardShufflerRestApi extends ResourceBase {
 				'message' => 'Only two parameters are allowed and they should be \'rows\' and \'columns\'. Both the parameters are required.',
 			);
 
-			$data = $this;
+			$data = array();
 		}
 		else {
 			$rows = $params['rows'];
